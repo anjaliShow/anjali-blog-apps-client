@@ -134,7 +134,7 @@ For developers interested in interacting with the API directly, here is the API 
 
 ### Authentication Tokens
 
-Authentication tokens are required for accessing certain protected routes. Include the token in the request header as Authorization: Bearer YOUR_TOKEN.
+Authentication tokens are required for accessing certain protected routes. Include the token in the request header as Authorization:YOUR_TOKEN.
 
 ## 8. Contributing
 
