@@ -4,7 +4,7 @@ import { FomInputs } from '../../components/FomInputs';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/slices/authSlice';
 
@@ -15,7 +15,7 @@ const Login = () => {
   });
   const [erros, setErrors] = useState({});
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
@@ -40,13 +40,16 @@ const Login = () => {
 
       if (validateErrors()) {
         await axios
-          .post('http://localhost:8000/api/v1/user/login', loginData)
+          .post(
+            'https://anj-blog-app-server.onrender.com/api/v1/user/login',
+            loginData
+          )
           .then((res) => {
             // dispatch(login(res?.data?.token))
 
             if (res?.data?.token) {
               localStorage.setItem('token', res.data?.token);
-              
+
               navigate('/');
             }
           })
@@ -94,6 +97,15 @@ const Login = () => {
               Login
             </button>
           </div>
+          <p className="text-center">
+            Not registered yet ?
+            <Link
+              className="text-primary curser text-decoration-none ml-2"
+              to={'/register'}
+            >
+              Signup
+            </Link>
+          </p>
         </form>
       </div>
     </>

@@ -79,7 +79,7 @@ const Register = () => {
         formData.append('avatar', userData.avatar);
 
         await axios
-          .post('http://localhost:8000/api/v1/user/register', formData)
+          .post('https://anj-blog-app-server.onrender.com/api/v1/user/register', formData)
           .then((res) => {
             // console.log('res', res);
             toast.success(res.data?.message, {

@@ -67,6 +67,16 @@
   /* object-fit: contain; */
   /* border-radius: 10px; */
 }
+.card_img {
+  width: 25rem;
+  height: 400px;
+}
+@media only screen and (max-width: 600px) {
+  .card_img {
+    max-width: 23rem;
+    max-height: 35rem;
+  }
+}
 .blogcard_content {
   width: 800px;
 }

@@ -18,8 +18,8 @@ const BlogCard = ({ data }) => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <div className="col-sm my-4">
-          <div className="card" style={{ width: '25rem', height: '35rem' }}>
+        <div className="col-sm my-4 shadow-4">
+          <div className="card card_img">
             <img
               src={data?.image}
               className="card-img-top thumbnail_img"
