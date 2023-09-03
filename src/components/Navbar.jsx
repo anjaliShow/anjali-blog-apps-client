@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './Search';
+// import Search from './Search';
 import { NavDropDown } from './NavDropDown';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -30,7 +30,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse mx-lg-4" id="navbarText">
-            <Search />
+            {/* <Search /> */}
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 {/* <a className="nav-link active" aria-current="page" href="#">

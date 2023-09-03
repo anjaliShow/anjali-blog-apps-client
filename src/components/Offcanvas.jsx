@@ -32,7 +32,7 @@ const Offcanvas = ({ data, handleDeleteComment }) => {
       if (isAuthenticated) {
         await axios
           .put(
-            `http://localhost:8000/api/v1/post/add-comment/${id}`,
+            `https://anj-blog-app-server.onrender.com/api/v1/post/add-comment/${id}`,
             { text },
             {
               headers: {

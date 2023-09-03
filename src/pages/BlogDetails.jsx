@@ -17,9 +17,11 @@ const BlogDetails = () => {
     getCommentsData();
   }, []);
 
+  // const baseUrl = import.meta.env.BASE_URL;
+
   const getData = async () => {
     const { data } = await axios.get(
-      `http://localhost:8000/api/v1/post/get/${id}`
+      `https://anj-blog-app-server.onrender.com/api/v1/post/get/${id}`
     );
     // console.log('data', data);
     setBlogData(data?.post);
@@ -29,7 +31,7 @@ const BlogDetails = () => {
 
   const getCommentsData = async () => {
     const { data } = await axios.get(
-      `http://localhost:8000/api/v1/post/get-comments/${id}`
+      `https://anj-blog-app-server.onrender.com/api/v1/post/get-comments/${id}`
     );
     // console.log('data', data.comment?.comments);
     setCommentsData(data.comment?.comments);
@@ -47,7 +49,7 @@ const BlogDetails = () => {
     try {
       await axios
         .delete(
-          `http://localhost:8000/api/v1/post/delete-comments/${postId}/${commentId}`,
+          `https://anj-blog-app-server.onrender.com/api/v1/post/delete-comments/${postId}/${commentId}`,
           {
             headers: {
               Authorization: localStorage.getItem('token'),

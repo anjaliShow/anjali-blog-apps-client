@@ -49,7 +49,7 @@ const WriteBlog = () => {
       if (editMode === true) {
         await axios
           .put(
-            `http://localhost:8000/api/v1/post/update/${postData?._id}`,
+            `https://anj-blog-app-server.onrender.com/api/v1/post/update/${postData?._id}`,
             formData,
             {
               headers: {
@@ -72,7 +72,7 @@ const WriteBlog = () => {
           });
       } else {
         await axios
-          .post('http://localhost:8000/api/v1/post/create', formData, {
+          .post('https://anj-blog-app-server.onrender.com/api/v1/post/create', formData, {
             headers: {
               Authorization: localStorage.getItem('token'),
             },

@@ -14,7 +14,7 @@ const MyPosts = () => {
 
   const getData = async () => {
     const { data } = await axios.get(
-      `http://localhost:8000/api/v1/post/get-my-posts`,
+      `https://anj-blog-app-server.onrender.com/api/v1/post/get-my-posts`,
       {
         headers: {
           Authorization: localStorage.getItem('token'),
@@ -28,11 +28,14 @@ const MyPosts = () => {
   const handleDelete = useCallback(async (id) => {
     try {
       await axios
-        .delete(`http://localhost:8000/api/v1/post/delete/${id}`, {
-          headers: {
-            Authorization: localStorage.getItem('token'),
-          },
-        })
+        .delete(
+          `https://anj-blog-app-server.onrender.com/api/v1/post/delete/${id}`,
+          {
+            headers: {
+              Authorization: localStorage.getItem('token'),
+            },
+          }
+        )
         .then((res) => {
           console.log('res', res);
           toast.success(res.data?.message, {
@@ -63,7 +66,6 @@ const MyPosts = () => {
             <p>You have no posts</p>
             <img
               className="thumbnail_img img-fluid"
-              //   style={{ width: '400px', height: '400px' }}
               src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-626.jpg?w=996&t=st=1693683255~exp=1693683855~hmac=7011e4d631bc16a6e792c720a6138d2d46a45ebb29c4f8dcb73d2a99befb9a4b"
               alt=""
             />

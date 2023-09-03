@@ -21,21 +21,12 @@ export const NavDropDown = ({ profiledata }) => {
         />
       </div>
       <ul className="dropdown-menu font_family_wotk_sans">
-        {/* <li>
-          <Link className="dropdown-item" to="/my-profile">
-            Profile
-          </Link>
-        </li> */}
         <li>
           <Link className="dropdown-item" to="/my-posts">
             My Posts
           </Link>
         </li>
-        {/* <li>
-          <Link className="dropdown-item" to="/my-library">
-            My Library
-          </Link>
-        </li> */}
+
         <li>
           <span className="dropdown-item curser" onClick={handleLogout}>
             Log out
