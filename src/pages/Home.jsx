@@ -25,11 +25,11 @@ const Home = () => {
       <Banner />
       <div className="container">
         {/* <div className="m-5 row"> */}
-        <motion className="row mt-5">
+        <div className="row mt-5">
           {blogData.map((item) => (
             <BlogCard key={item?._id} data={item} />
           ))}
-        </motion>
+        </div>
         {/* </div> */}
       </div>
     </>

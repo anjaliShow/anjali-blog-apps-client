@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
 import BlogCard from '../components/BlogCard';
-import MyBlogCard from '../components/MyBlogCard';
+// import MyBlogCard from '../components/MyBlogCard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+const MyBlogCard = React.lazy(() => import('../components/MyBlogCard'));
+
 
 const MyPosts = () => {
   const [blogData, setBlogData] = useState([]);
@@ -82,7 +85,7 @@ const MyPosts = () => {
               ))}
             </div>
           </>
-        )}
+         )} 
       </div>
     </>
   );

@@ -9,7 +9,7 @@ import { BiPencil } from 'react-icons/bi';
 const Navbar = () => {
   const { isAuthenticated, profiledata } = useSelector(selectAuth);
   // console.log('isAuthenticated', isAuthenticated);
-  console.log('profiledata', profiledata);
+  // console.log('profiledata', profiledata);
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary p-3">
