@@ -24,7 +24,7 @@ const MyBlogCard = ({ data, handleDelete }) => {
               <img
                 src={data?.image}
                 alt={data?.title}
-                className="img-thumbnail thumbnail_img"
+                className="img-fluid thumbnail_img"
               />
             </Link>
           </div>

@@ -88,7 +88,7 @@ const BlogDetails = () => {
             </p>
           </div>
 
-          <div className="d-flex justify-content-start col-lg-7 align-items-center gap-3">
+          <div className="d-flex justify-content-start col-12 align-items-center gap-3">
             <div className="">
               <img
                 src={blogData?.author?.avatar}
@@ -101,17 +101,17 @@ const BlogDetails = () => {
               <br />
               <span className="text-secondary">{memoizedCreatedDate}</span>
             </div>
-          </div>
           <div className="my-3">
             <Offcanvas
               data={commentsData}
               handleDeleteComment={handleDeleteComment}
             />
           </div>
-          <div className="mt-4">
-            <img src={blogData?.image} alt="" className="img-fluid blog_img" />
           </div>
-          <div className="mt-4 width_700">
+          <div className="mt-4">
+            <img src={blogData?.image} alt="" className="blog_img img-fluid" />
+          </div>
+          <div className="mt-4">
             <p className="fs-5 lh-lg">{blogData?.content}</p>
           </div>
         </div>
