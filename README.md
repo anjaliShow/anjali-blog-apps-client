@@ -1,6 +1,6 @@
 # Blog Application Documentation
 
-![alt text](https://ecomm1.s3.ap-south-1.amazonaws.com/Screenshot+(133).png)
+![alt text](https://ecomm1.s3.ap-south-1.amazonaws.com/Screenshot+(134).png)
 
 - visit : https://anjali-blog-apps-client.vercel.app/
 
