@@ -80,7 +80,44 @@ const BlogDetails = () => {
   return (
     <>
       <ToastContainer />
-      <div className="d-flex justify-content-center width_full">
+      <div className="container-xxl col-lg-7 text-left mt-5">
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <div className="">
+            <p className="fs-1" style={{ fontWeight: '900' }}>
+              {blogData?.title}
+            </p>
+          </div>
+
+          <div className="d-flex justify-content-start col-lg-7 align-items-center gap-3">
+            <div className="">
+              <img
+                src={blogData?.author?.avatar}
+                alt=""
+                className="blogcard_avatar rounded-circle"
+              />
+            </div>
+            <div className="">
+              <span className="fs-5"> {blogData?.author?.fullName} </span>{' '}
+              <br />
+              <span className="text-secondary">{memoizedCreatedDate}</span>
+            </div>
+          </div>
+          <div className="my-3">
+            <Offcanvas
+              data={commentsData}
+              handleDeleteComment={handleDeleteComment}
+            />
+          </div>
+          <div className="mt-4">
+            <img src={blogData?.image} alt="" className="img-fluid blog_img" />
+          </div>
+          <div className="mt-4 width_700">
+            <p className="fs-5 lh-lg">{blogData?.content}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="d-flex justify-content-center width_full">
         <div className="d-flex justify-content-center flex-column">
           <div className="">
             <h1 className="" style={{ fontWeight: '900' }}>
@@ -115,7 +152,7 @@ const BlogDetails = () => {
             <p className="fs-5 lh-lg">{blogData?.content}</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

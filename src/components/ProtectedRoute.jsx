@@ -25,7 +25,7 @@ const ProtectedRoute = ({ children }) => {
       // console.log('currentTime', currentTime);
 
       if (decoded.exp < currentTime) {
-        console.log('clikkkeddd');
+        // console.log('clikkkeddd');
         localStorage.removeItem('token');
         dispatch(logout());
         navigate('/login');

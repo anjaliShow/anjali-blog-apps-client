@@ -20,7 +20,7 @@ const DefaultLayout = () => {
 
   const getData = async () => {
     const { data } = await axios.get(
-      'http://localhost:8000/api/v1/user/get-profile',
+      'https://anj-blog-app-server.onrender.com/api/v1/user/get-profile',
       {
         headers: {
           Authorization: localStorage.getItem('token'),
