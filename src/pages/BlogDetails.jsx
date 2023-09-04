@@ -83,12 +83,12 @@ const BlogDetails = () => {
       <div className="container-xxl col-lg-7 text-left mt-5">
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="">
-            <p className="fs-1" style={{ fontWeight: '900' }}>
+            <p className="fs-1 text-left" style={{ fontWeight: '900' }}>
               {blogData?.title}
             </p>
           </div>
 
-          <div className="d-flex justify-content-start col-12 align-items-center gap-3">
+          <div className="d-flex justify-content-start col-12 col-lg-10 align-items-center gap-3">
             <div className="">
               <img
                 src={blogData?.author?.avatar}
